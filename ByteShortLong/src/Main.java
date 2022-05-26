@@ -35,5 +35,13 @@ public class Main {
         System.out.println("Long = 50000+ 10 * ("
                 +myByteVal+" + "+myShortVal+" + "
                 +myIntegerVal+") = "+myLongVal);
+
+        System.out.println('\u20b9');
+
+        boolean isMyVariable = true;
+        System.out.println(isMyVariable);
+
+        String myCity = "Bengaluru";
+        System.out.println(myCity);
     }
 }
