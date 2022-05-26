@@ -25,5 +25,15 @@ public class Main {
         System.out.println(customShortVal);
         System.out.println(customIntegerVal);
         System.out.println(customLongVal);
+
+        byte myByteVal = 4;
+        short myShortVal = 12000;
+        int myIntegerVal = 45000;
+        myLongVal = (long) (50000 + 10 * (myByteVal + myShortVal + myIntegerVal));
+        System.out.println("Byte = "+myByteVal+", Short = "
+                +myShortVal+", Integer = "+myIntegerVal+")");
+        System.out.println("Long = 50000+ 10 * ("
+                +myByteVal+" + "+myShortVal+" + "
+                +myIntegerVal+") = "+myLongVal);
     }
 }
