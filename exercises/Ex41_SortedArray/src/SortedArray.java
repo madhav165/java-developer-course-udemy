@@ -24,20 +24,6 @@ public class SortedArray {
         for (int i = 0; i < array.length; i++) {
             sortedArray[i] = array[i];
         }
-//        int initMin, minJ, min, k;
-//        for (int i = 0; i < array.length - 1; i++) {
-//            min = sortedArray[i];
-//            initMin = min;
-//            minJ = i;
-//            for (int j = i + 1; j < array.length; j++) {
-//                if (array[j] < min) {
-//                    min = array[j];
-//                    minJ = j;
-//                }
-//            }
-//            sortedArray[i] = min;
-//            sortedArray[minJ] = initMin;
-//        }
         Arrays.sort(sortedArray);
         int n = sortedArray.length;
         for (int i = 0; i < n / 2; i++) {
