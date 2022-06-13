@@ -1,4 +1,3 @@
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class SortedArray {
@@ -21,21 +20,24 @@ public class SortedArray {
 
     public static int[] sortIntegers(int[] array) {
         int[] sortedArray = new int[array.length];
+        int max;
+        int temp;
+        boolean flag = true;
+
         for (int i = 0; i < array.length; i++) {
             sortedArray[i] = array[i];
         }
-        Arrays.sort(sortedArray);
-        int n = sortedArray.length;
-        for (int i = 0; i < n / 2; i++) {
 
-            // Storing the first half elements temporarily
-            int temp = sortedArray[i];
-
-            // Assigning the first half to the last half
-            sortedArray[i] = sortedArray[n - i - 1];
-
-            // Assigning the last half to the first half
-            sortedArray[n - i - 1] = temp;
+        while (flag) {
+            flag = false;
+            for (int i = 0; i < sortedArray.length - 1; i++) {
+                if (sortedArray[i] < sortedArray[i+1]) {
+                    temp = sortedArray[i + 1];
+                    sortedArray[i + 1] = sortedArray[i];
+                    sortedArray[i] = temp;
+                    flag = true;
+                }
+            }
         }
         return sortedArray;
     }
